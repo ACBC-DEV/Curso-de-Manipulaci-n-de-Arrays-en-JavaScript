@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <input type="checkbox" name="" type="checkbox" checked="false" id="" />
+    <script>
+      const products = [
+        { name: "laptop", done: true },
+        { name: "desktop", done: false },
+        { name: "phone", done: true },
+        { name: "tablet", done: false },
+      ];
+
+      const app = document.getElementById("app");
+      products.forEach((product) => {
+        app.innerHTML += `<div> <input type="checkbox" ${
+          product.done && "checked"
+        }/> --${product.name}</div>`;
+      });
+    </script>
+  </body>
+</html>
